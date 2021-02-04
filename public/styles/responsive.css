@@ -9,16 +9,21 @@
         text-align: center;
     }
 
-    #page-home header a {
-        position: absolute;
-        bottom: 1px;
+    #page-home header {
+        flex-direction: column;
+    }
 
-        left: 50%;
-        transform: translateX(-50%);
+    #page-home header img {
+        margin-bottom: 1.4rem;
     }
 
     #page-home main {
+        margin-top: 40px;
         align-items: center;
+    }
+
+    #page-home main a {
+        margin-bottom: 40px;
     }
 
     #page-search-results main .cards {
@@ -29,12 +34,21 @@
         padding: 32px;
     }
 
+    #page-create-point form h1 {
+        align-self: center;
+    }
+
     #page-create-point form .field-group {
         flex-direction: column;
     }
 
     #page-create-point form .field-group .field + .field {
         margin-left: 0;
+    }
+    
+    #page-create-point form .field-group.one-third .field:last-child {
+        flex: 1;
+        width: initial;
     }
 
     #page-create-point form legend {
@@ -60,12 +74,27 @@
 }
 
 @media (max-width: 570px) {
+    #page-home header,
+    #page-create-point header,
+    #page-search-results header {
+        flex-direction: column;
+    }
+    #page-home header img,
+    #page-create-point header img,
+    #page-search-results header img{
+        margin-bottom: 1.4rem;
+    }
+
     #page-search-results main .cards {
         grid-template-columns: 1fr;
     }
 
     #page-search-results main .cards .card img {
         height: 300px;
+    }
+
+    #page-create-point form {
+        /* margin-top: 40px; */
     }
 
     #page-create-point form .items-grid {

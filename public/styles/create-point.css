@@ -33,17 +33,16 @@
 }
 
 form {
-    background-color: white;
-
-    margin: 80px auto;
-    padding: 64px;
-
-    border-radius: 8px;
-
-    max-width: 730px;
-
     display: flex;
     flex-direction: column;
+    
+    margin: 80px auto;
+    padding: 64px;
+    
+    background-color: white;
+    border-radius: 8px;
+    
+    max-width: 730px;
 }
 
 form h1 {
@@ -75,6 +74,10 @@ form legend span {
     color: var(--title-color);
 }
 
+form .field-group {
+    display: flex;
+}
+
 form .field {
     flex: 1;
     display: flex;
@@ -83,8 +86,9 @@ form .field {
     margin-bottom: 24px;
 }
 
-form .field-group {
-    display: flex;
+form .field-group.one-third .field:last-child {
+    flex: 0;
+    width: 30%;
 }
 
 form input,
@@ -92,6 +96,7 @@ form select {
     background-color: #f0f0f5;
 
     border: 0;
+    border-radius: 8px;
     padding: 16px 24px;
     font-size: 16px;
 
